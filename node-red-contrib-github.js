@@ -32,7 +32,7 @@ module.exports = function(RED) {
         var github = new (require('github-api'))({
           token: RED.nodes.getNode(n.github).credentials.token,
           auth: "oauth"
-        });
+        },RED.nodes.getNode(n.github).credentials.apiBase);
         this.status({});
         var node = this;
         this.on('input', function(msg) {
