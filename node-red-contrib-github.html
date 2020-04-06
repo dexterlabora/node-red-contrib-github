@@ -14,7 +14,8 @@
 <script type="text/javascript">
     RED.nodes.registerType('github-credentials',{
       defaults: {
-        name: {value:"", required: true}
+        name: {value:"", required: true},
+        apiBase: {value:"https://api.github.com",required: true}
       },
       category: 'config',
       credentials: {
